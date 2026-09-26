@@ -44,3 +44,8 @@ yarn.lock
 
 # Large generated docs/reports produced by this tool's own runs
 /reports/
+
+# Cloned target repos (created by the orchestrator in the system temp dir,
+# but guard against any local tmp/ as well)
+tmp/
+/tmp/

@@ -17,6 +17,7 @@ coverage/
 .env.local
 .env.*.local
 !.env.example
+!.env.local.example
 
 # Supabase local dev
 supabase/.branches/
