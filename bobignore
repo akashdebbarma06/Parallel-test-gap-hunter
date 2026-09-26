@@ -1,0 +1,46 @@
+# .bobignore
+# Keeps Bob's repository context focused on source code that matters for the
+# Parallel Test-Gap Hunter's subagent scans. Excluding build output and noise
+# means each subagent's isolated context stays small and relevant instead of
+# burning tokens on generated/irrelevant files.
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+.next/
+dist/
+build/
+out/
+
+# Coverage output (the tool generates this itself — don't let Bob treat it as source)
+coverage/
+.nyc_output/
+
+# Env / secrets — never index or read these
+.env
+.env.*
+!.env.example
+
+# Supabase local dev artifacts
+supabase/.branches/
+supabase/.temp/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Editor/OS noise
+.DS_Store
+.vscode/
+.idea/
+
+# Lockfiles (large, low value for module-level reasoning)
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Large generated docs/reports produced by this tool's own runs
+/reports/
